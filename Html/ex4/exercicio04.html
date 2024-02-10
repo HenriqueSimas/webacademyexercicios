@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+   <h1>Formulário de cadastro</h1> 
+   <p>Por favor, preencha o formulário abaixo e clique no botão enviar!</p>
+   <form>
+    <fieldset>
+      <legend>Dados Básicos</legend>
+  
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome"><br>
+      <label for="endereco">Endereço:</label><br>
+      <input type="text" id="endereco" name="endereco"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="seunome@dominio.com.br"><br>
+  
+    </fieldset>
+  </form>
+  <form>
+  <fieldset>
+    <legend>Preferencia por curso</legend>
+  <input type="radio" id="eng" name="curso" value="eng">
+  <label for="eng"> Engenharia de Software</label><br>
+  <input type="radio" id="cc" name="curso" value="cc">
+  <label for="cc"> Ciência da Computação</label><br>
+  <input type="radio" id="fisica" name="curso" value="fisica">
+  <label for="fisica"> Física</label><br><br>
+  </fieldset>
+</form>
+<form>
+    <fieldset>
+        <legend>Horário de disponibilidade</legend>
+        <input type="checkbox" id="manha" name="manha" value="manha">
+  <label for="interesse1"> Manhã</label><br>
+  <input type="checkbox" id="tarde" name="tarde" value="tarde">
+  <label for="interesse2">Tarde</label><br>
+  <input type="checkbox" id="noite" name="noite" value="noite">
+  <label for="interesse3"> Noite</label><br><br>
+    </fieldset>
+</form>
+<form>
+    <fieldset>
+        <legend>Dados Complementares</legend>
+        <label for="nascimento">Data de Nascimento</label>
+<input type="date" name="nascimento" id="nascimento"><br><br>
+<label for="ano">Em quantos anos pretende terminar o curso?</label><br>
+<input type="number" name="ano" min="5" max="7" step="1"
+value="5" id="ano"><br><br>
+<label for="nivel">Nível de conhecimento sobre o curso (entre 0 e 10):</label><br>
+  <input type="range" id="nivel" name="nivel" min="0" max="10">
+
+    </fieldset>
+</form>
+<form>
+    <fieldset>
+        <legend>Formação Acadêmica</legend>
+        <select name="formacao" id="formacao">
+            <option value="1">Ensino Médio</option>
+            <option value="2">Ensino Superior</option>
+            </select><br><br>
+        <legend>Formação em escola:</legend>
+            <select name="escola"  id="publica">
+                <option value="1">Escola Pública</option>
+                <option value="2">Escola Particular</option>
+            </select>
+    </fieldset>
+</form>
+<form>
+    <fieldset>
+        <legend>Submeta seus documentos</legend>
+        <input type="file" name="curriculo">
+        </fieldset>
+</form>
+<form>
+    <fieldset>
+        <legend>Fale suas expectativas sobre o curso escolhido</legend>
+        <textarea name="mensagem" rows="4" cols="30">
+            Sua mensagem :)
+            </textarea>
+    </fieldset>
+</form><br><br>
+<input type="submit" value="Enviar mensagem">
+ <input type="submit" value="Resetar dados">
+</body>
+</html>
