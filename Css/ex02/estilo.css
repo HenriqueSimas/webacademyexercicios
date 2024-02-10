@@ -1,0 +1,30 @@
+body{
+    background-image: url(nebula.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    
+}
+
+.div{
+    color: white;
+    border: 9px solid #C8823D;
+    border-radius: 20px;
+    height: 400px;
+    width: 220px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-top: 10px;
+
+    
+}
+
+.div2{
+    margin-left: 20px;
+    height: 10px;
+    width: 180px;
+    font-size: 18px;
+}
+    
