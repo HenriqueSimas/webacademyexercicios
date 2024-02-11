@@ -1,0 +1,27 @@
+/* Exercício 1 */
+/* Abra o "index.html" no navegador e altere a posição da navbar (elemento nav) para que ela permaneça fixa na tela durante o scroll.  */
+
+body {
+  background: #aaaaaa;
+  font-family: roboto, sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 60px 10px;
+}
+
+nav {
+  width: 100%;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  position:fixed;
+  left: 0;
+  top: 0;
+}
+
+nav > a {
+  padding: 0 15px;
+}
