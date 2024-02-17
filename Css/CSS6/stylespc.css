@@ -1,0 +1,96 @@
+
+
+html {
+  font:
+    1.2em/1.4 Arial,
+    Helvetica,
+    sans-serif;
+}
+
+body {
+  padding: 0 0 1em;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  border: 5px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 1em;
+
+}
+
+header .title {
+  font-size: 150%;
+  font-style: italic;
+  font-weight: bold;
+  padding: 1em;
+}
+
+main {
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-auto-rows: 1fr 1fr;
+  grid-template-areas: 
+  "article article article article side "
+  "article article article article side"
+  ;
+
+}
+
+article{
+  grid-area: article;
+}
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display :grid ;  
+  gap :20px ;
+  grid-template-columns:auto auto auto ;
+  
+}
+
+.cards li {
+  border: 5px solid #000;
+  margin-bottom: 1em;
+  
+}
+
+.cards h2 {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+.cards .inner {
+  padding: 0.5em 1em;
+}
+
+.sidebar {
+  background-color: #333;
+  border: 5px solid #000;
+  padding: 0.5em 1em;
+  color: #fff;
+  grid-area: side;
+}
