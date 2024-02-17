@@ -1,0 +1,43 @@
+.container{
+  height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 1fr;
+    gap: 8px;
+    box-sizing: border-box;
+    grid-template-areas: 
+    "r r r b b b"
+    "gr gr ye ye ye ye"
+    "gy gy gy gy gy gy"
+    ;
+    }
+    
+    .red{
+    grid-area: r;
+    background-color: darkred;
+    }
+    
+    .yellow{
+        grid-area: ye;
+        background-color: darkgoldenrod;
+    }
+    
+    .green{
+        grid-area: gr;
+        background-color: green;
+    }
+    
+    .blue{
+        grid-area: b;
+        background-color: blue;
+    }
+    
+    .gray{
+        grid-area: gy;
+        background-color: gray;
+    }
+    
+    .red,.blue ,.gray ,.green ,.yellow {
+        border: 8px solid white;
+        border-radius: 16px;
+    }
