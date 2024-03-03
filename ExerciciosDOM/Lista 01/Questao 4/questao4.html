@@ -1,0 +1,49 @@
+<body>
+  <h1>Várias listas</h1>
+
+  <p id="lista-titulo" name="lista">Lista de itens:</p>
+
+  <ul class="lista-itens-1">
+    <li id="one" class="hot">item a</li>
+    <li id="two" class="hot">item b</li>
+    <li id="three" class="hot">item c</li>
+    <li id="four">item d</li>
+  </ul>
+
+  <ul class="lista-itens-2">
+    <li id="one" class="hot">item a</li>
+    <li id="two" class="hot">item b</li>
+    <li id="three" class="hot">item c</li>
+    <li id="four">item d</li>
+  </ul>
+
+  <ul class="lista-itens-3">
+    <li id="one" class="hot">item a</li>
+    <li id="two" class="hot">item b</li>
+    <li id="three" class="hot">item c</li>
+    <li id="four">item d</li>
+  </ul>
+
+  <ul class="lista-itens-4">
+    <li id="one" class="hot">item a</li>
+    <li id="two" class="hot">item b</li>
+    <li id="three" class="hot">item c</li>
+    <li id="four">item d</li>
+  </ul>
+  <script>
+    // i)
+    console.log("lista-itens-2")
+    var itens = document.querySelectorAll('.lista-itens-2 li');
+    for(const item of itens) {
+      console.log(item.textContent);
+    }
+    console.log("\n");
+    //ii
+    console.log("Itens de classe hot");
+    var itensHot = document.querySelectorAll('.lista-itens-2 li.hot');
+    for(const item of itensHot){
+      console.log(item.textContent);
+    }
+  </script>
+</body>
+

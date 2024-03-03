@@ -1,0 +1,36 @@
+<style>
+  h1 {
+    width: 350px;
+    padding: 20px;
+    background-color: lightblue;
+  }
+  .lista {
+    border: 1px solid lightcoral;
+  }
+</style>
+
+<body>
+  <h1>Questao 03</h1>
+
+  <h3 id="lista-titulo">Lista de itens:</h3>
+
+  <ul id="lista-itens">
+    <li id="one" class="hot">item a</li>
+    <li id="two" class="hot">item b</li>
+    <li id="three" class="hot">item c</li>
+    <li id="four">item d</li>
+  </ul>
+  <script>
+    //a
+    document.querySelector('h1').style.backgroundColor = 'blue';
+    
+    //b
+    document.getElementById('lista-titulo').classList.add('lista');
+  
+    //c
+    var itens = document.getElementsByClassName('hot');
+    for (let i = 0; i < itens.length; i++){
+      itens[i].style.fontWeight = 'bold';
+    }
+  </script>
+</body>
