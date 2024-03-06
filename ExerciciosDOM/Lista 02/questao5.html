@@ -1,0 +1,60 @@
+<body>
+  <h1>To-do</h1>
+
+  <div>
+    <p id="lista-titulo" name="lista">Lista de atividades:</p>
+  </div>
+
+  <div>
+    <input placeholder="Digite aqui o item" />
+    <button>Adicionar</button>
+  </div>
+
+  <ul id="lista-itens">
+    <li>item a</li>
+  </ul>
+
+  <div>
+    <button>Remover último item</button>
+  </div>
+  <script>
+    //a
+
+   const input = document.querySelector('input');
+   const botoes = document.querySelectorAll('button');
+   const lista_itens = document.getElementById('lista-itens');
+
+   function adicionar_item(){
+    const texto = input.value.trim();
+    if(texto === ''){
+      alert('Insira um item, por favor!');
+      return;
+    }
+
+    const novo_item = document.createElement('li');
+    novo_item.textContent = texto;
+    lista_itens.appendChild(novo_item);
+    input.value = '';
+   }
+   
+  
+   function remover_item(){
+    if(lista_itens.childElementCount > 0){
+      lista_itens.removeChild(lista_itens.lastElementChild);
+    }
+      else{
+      alert('Não há itens na lista');
+    }
+   }
+
+   
+   for(const botao of botoes){
+    if(botao.textContent.indexOf("Adicionar")!==-1){
+   botao.addEventListener('click',adicionar_item);
+    }
+    if(botao.textContent.indexOf("Remover último item")!==-1){
+   botao.addEventListener('click',remover_item);
+    }
+   }
+   </script>
+</body>
