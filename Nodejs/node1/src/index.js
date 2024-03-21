@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url');
 const utils = require('./utils');
-const dirPath = process.argv[2], dotenv = require('dotenv');
+const dirPath = process.argv[2], 
+dotenv = require('dotenv');
 dotenv.config({path: `.env.${process.env.NODE_ENV}`});
 console.log(process.env.NODE_ENV);
 const PORT = process.env.PORT;
