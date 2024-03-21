@@ -1,16 +1,17 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const url = require('url');
-const utils = require('./utils');
-const dirPath = process.argv[2], dotenv = require('dotenv');
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import url from 'url';
+import {createLink} from'./utils.js';
+const dirPath = process.argv[2]
+import dotenv from 'dotenv';
 dotenv.config({path: `.env.${process.env.NODE_ENV}`});
 console.log(process.env.NODE_ENV);
 const PORT = process.env.PORT;
 
 const server = http.createServer((req, res) => {
     let reqUrl = url.parse(req.url, true);
-    filePath = path.join(dirPath, reqUrl.pathname);
+    let filePath = path.join(dirPath, reqUrl.pathname);
 
     fs.stat(filePath, (err, stats) => {
         
@@ -24,7 +25,7 @@ const server = http.createServer((req, res) => {
                 
                 else {
                     let fileLinks = '';
-                    files.forEach(file => { fileLinks += utils.createLink(file); });
+                    files.forEach(file => { fileLinks += createLink(file); });
                     res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'}); 
                     res.end(fileLinks);
                 }
