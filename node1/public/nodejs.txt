@@ -1,7 +1,0 @@
-De acordo com sua definição, o Node é
-um runtime, que nada mais é do que um
-conjunto de códigos,API's, ou seja são
-bibliotecas responsáveis pelo tempo de
-execução (é o que faz o seu programa)
-funciona como um interpretador de javascript
-fora do ambiente do navegador web
