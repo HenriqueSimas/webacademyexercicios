@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #e3ebf1;
+}
+
+#input{
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(177, 177, 177);
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+#generate{
+    border-radius: 5px;
+    border: 1px solid rgb(177, 177, 177);
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
