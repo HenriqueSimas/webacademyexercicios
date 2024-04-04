@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Bodegão Eletro</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1>Loja Bodegão Eletro</h1>
+    <p>Selecione o produto que deseja adicionar ao carrinho:</p>
+
+    <select class="form-selecao mb-4 aria-label="Default select example" id="produto-selecionado" required>
+      <option selected>Selecione o Produto</option>
+      <option value="1">Celular</option>
+      <option value="2">TV</option>
+      <option value="3">Bicicleta</option>
+    </select>
+
+    <div id="form-celular" style="display: none;">
+      <form id="form-celular-enviar">
+        <div class="form-group">
+          <label for="modelo-celular">Modelo:</label>
+          <input type="text" class="form-control" id="modelo-celular" name="modelo-celular" placeholder="Modelo" required>
+        </div>
+        <div class="form-group">
+          <label for="memoria-celular">Memória:</label>
+          <input type="text" class="form-control" id="memoria-celular" name="memoria-celular" placeholder="Memória" required>
+        </div>
+        <div class="form-group">
+          <label for="fabricante-celular">Fabricante:</label>
+          <input type="text" class="form-control" id="fabricante-celular" name="fabricante-celular" placeholder="Fabricante" required>
+        </div>
+        <div class="form-group">
+          <label for="valor-celular">Preço:</label>
+          <input type="number" class="form-control" id="valor-celular" name="valor-celular" placeholder="Preço" required>
+        </div>
+        <button class="btn btn-primary btn-sm mt-2" type="submit" id="enviar-celular">Enviar</button>
+      </form>
+    </div>
+
+    <div id="form-tv" style="display: none;">
+      <form id="form-tv-enviar">
+        <div class="form-group">
+          <label for="modelo-tv">Modelo:</label>
+          <input type="text" class="form-control" id="modelo-tv" name="modelo-tv" placeholder="Modelo" required>
+        </div>
+        <div class="form-group">
+          <label for="resolucao">Resolução:</label>
+          <input type="text" class="form-control" id="resolucao" name="resolucao" placeholder="Resolução" required>
+        </div>
+        <div class="form-group">
+          <label for="polegadas">Polegadas:</label>
+          <input type="number" class="form-control" id="polegadas" name="polegadas" placeholder="Polegadas" required>
+        </div>
+        <div class="form-group">
+          <label for="fabricante-tv">Fabricante:</label>
+          <input type="text" class="form-control" id="fabricante-tv" name="fabricante-tv" placeholder="Fabricante" required>
+        </div>
+        <div class="form-group">
+          <label for="valor-tv">Preço:</label>
+          <input type="number" class="form-control" id="valor-tv" name="valor-tv" placeholder="Preço" required>
+        </div>
+        <button class="btn btn-primary btn-sm mt-2" type="submit" id="enviar-tv">Enviar</button>
+      </form>
+    </div>
+
+    <div id="form-bike" style="display: none;">
+      <form id="form-bike-enviar">
+        <div class="form-group">
+          <label for="modelo-bike">Modelo:</label>
+          <input type="text" class="form-control" id="modelo-bike" name="modelo-bike" placeholder="Modelo" required>
+        </div>
+        <div class="form-group">
+          <label for="aro">Aro:</label>
+          <input type="number" class="form-control" id="aro" name="aro" placeholder="Aro" required>
+        </div>
+        <div class="form-group">
+          <label for="fabricante-bike">Fabricante:</label>
+          <input type="text" class="form-control" id="fabricante-bike" name="fabricante-bike" placeholder="Fabricante" required>
+        </div>
+        <div class="form-group">
+          <label for="valor-bike">Preço:</label>
+          <input type="number" class="form-control" id="valor-bike" name="valor-bike" placeholder="Preço" required>
+        </div>
+        <button class="btn btn-primary btn-sm mt-2" type="submit" id="enviar-bike">Enviar</button>
+      </form>
+    </div>
+
+    <div id="display-do-carrinho" class="mt-5 border rounded p-3">
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
