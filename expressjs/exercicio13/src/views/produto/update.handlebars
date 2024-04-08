@@ -1,0 +1,26 @@
+<h3>Criação de Produtos</h3>
+
+<div class="conteiner">
+    <div class="row">
+
+    <div class="col-6"><form action="/produto/update/{{produto.id}}" method="post">
+<div class="mb-3">
+  <label for="nome" class="form-label">Nome</label>
+  <input type="text" class="form-control" id="nome" name ="nome" value="{{produto.nome}}" placeholder="Celular Motorola MotoG" >
+</div>
+
+<div class="mb-3">
+  <label for="preco" class="form-label">Preco</label>
+  <input type="text" class="form-control" id="preco" name ="preco" value="{{produto.preco}}" placeholder="3000">
+</div>
+
+<div class="mb-3">
+  <label for="estoque" class="form-label">Estoque</label>
+  <input type="text" class="form-control" id="estoque" name ="estoque" value="{{produto.estoque}}" placeholder="100">
+</div>
+<button type="submit" class="btn btn-primary">Enviar</button>
+
+ </form>
+</div>
+ </div>
+</div>

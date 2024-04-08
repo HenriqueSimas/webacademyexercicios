@@ -1,0 +1,16 @@
+{
+  "produtos": [
+    {
+      "id": "4ef9",
+      "nome": "Celular Motorola Eage 4",
+      "preco": "1000",
+      "estoque": "10"
+    },
+    {
+      "id": "1710",
+      "nome": "Luminária",
+      "preco": "1000",
+      "estoque": "400"
+    }
+  ]
+}
