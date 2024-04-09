@@ -1,8 +1,8 @@
 {
-  "name": "exercicio01",
+  "name": "exercicio13",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.ts -- watch src",
     "build": "npx tsc",
