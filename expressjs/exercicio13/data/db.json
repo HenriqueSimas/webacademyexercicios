@@ -1,16 +1,16 @@
 {
   "produtos": [
     {
-      "id": "1a18",
-      "nome": "Smartphone Xiaomi POCO X6 Pro 5G ",
-      "preco": "2300",
-      "estoque": "40"
+      "id": "40fa",
+      "nome": "Moto G",
+      "preco": "1",
+      "estoque": "2"
     },
     {
-      "id": "1e1b",
-      "nome": "Smartphone Xiaomi POCO X6 ",
-      "preco": "4000",
-      "estoque": "2"
+      "id": "f2e4",
+      "nome": "Iphone 15 Pro Max",
+      "preco": "3000",
+      "estoque": "29"
     }
   ]
 }

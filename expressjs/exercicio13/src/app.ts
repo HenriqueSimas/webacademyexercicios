@@ -1,4 +1,4 @@
-import routes from './router/router'; 
+import router from './router/router'; 
 import express from 'express';
 import validateEnv from './utils/validateEnv';
 import dotenv from 'dotenv';
@@ -36,7 +36,7 @@ app.use("/js", [
 ]);
 
 app.use(express.urlencoded({extended:false}));
-app.use('/', routes);
+app.use(router);
 
 app.listen(PORT, () => {
   console.log(`Express app iniciada na porta ${PORT}.`);
