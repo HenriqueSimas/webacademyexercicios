@@ -1,16 +1,22 @@
 {
   "produtos": [
     {
-      "id": "40fa",
-      "nome": "Moto G",
-      "preco": "1",
-      "estoque": "2"
-    },
-    {
       "id": "f2e4",
       "nome": "Iphone 15 Pro Max",
       "preco": "3000",
       "estoque": "29"
+    },
+    {
+      "id": "3ad1",
+      "nome": "A30",
+      "preco": "2000",
+      "estoque": "200"
+    },
+    {
+      "id": "2fb1",
+      "nome": "Multilaser",
+      "preco": "20",
+      "estoque": "1"
     }
   ]
 }

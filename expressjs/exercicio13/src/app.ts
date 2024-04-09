@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import { engine } from 'express-handlebars';
 import sass from 'node-sass-middleware';
 import path from 'path';
+import morgan from 'morgan' ;
 dotenv.config();
 validateEnv();
 
@@ -34,7 +35,7 @@ app.use("/js", [
   express.static(path.join(__dirname, '../public/js')),
   express.static(path.join(__dirname, '../node_modules/bootstrap/dist/js')),
 ]);
-
+app.use(morgan('short'));
 app.use(express.urlencoded({extended:false}));
 app.use(router);
 
