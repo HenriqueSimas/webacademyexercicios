@@ -1,44 +1,62 @@
-import router from './router/router'; 
+import routes from './router/router';
 import express from 'express';
 import validateEnv from './utils/validateEnv';
 import dotenv from 'dotenv';
 import { engine } from 'express-handlebars';
-import sass from 'node-sass-middleware';
+import sassMiddleware from 'node-sass-middleware';
 import path from 'path';
-import morgan from 'morgan' ;
+import morgan from 'morgan';
+
+// Load environment variables from .env file
 dotenv.config();
+
+// Validate environment variables
 validateEnv();
 
 const app = express();
-const PORT = process.env.PORT || 3333
+const PORT = process.env.PORT || 3333;
 
-app.engine('handlebars', engine({
-  layoutsDir: `${__dirname}/views/layouts`,
-  defaultLayout: 'main',
-}));
+// Setup logging middleware
+app.use(morgan('short'));
 
-app.set("view engine", "handlebars");
-app.set("views", `${__dirname}/views`);
+// Setup view engine and handlebars
+app.engine(
+  'handlebars',
+  engine({
+    layoutsDir: path.join(__dirname, 'views/layouts'),
+    defaultLayout: 'main',
+  }),
+);
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 
+// Setup Sass middleware for compiling SCSS to CSS
 app.use(
-  sass({
-    src: path.join(__dirname, "public/scss"),
-    dest: path.join(__dirname, "public/css"),
-    outputStyle: "compressed",
-    prefix: "/css",
-  })
+  sassMiddleware({
+    src: path.join(__dirname, 'public', 'scss'),
+    dest: path.join(__dirname, 'public', 'css'),
+    outputStyle: 'compressed',
+    prefix: '/css',
+  }),
 );
 
-app.use("/css", express.static(path.join(__dirname, "public/css")));
+// Serve static files
+app.use('/css', express.static(path.join(__dirname, 'public', 'css')));
+app.use('/js', express.static(path.join(__dirname, 'public', 'js')));
+app.use(
+  '/js/bootstrap',
+  express.static(
+    path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js'),
+  ),
+);
 
-app.use("/js", [
-  express.static(path.join(__dirname, '../public/js')),
-  express.static(path.join(__dirname, '../node_modules/bootstrap/dist/js')),
-]);
-app.use(morgan('short'));
-app.use(express.urlencoded({extended:false}));
-app.use(router);
+// Parse incoming request bodies
+app.use(express.urlencoded({ extended: false }));
 
+// Setup routes
+app.use(routes);
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Express app iniciada na porta ${PORT}.`);
+  console.log(`Express app listening on port ${PORT}`);
 });

@@ -1,22 +1,16 @@
 {
   "produtos": [
     {
-      "id": "f2e4",
-      "nome": "Iphone 15 Pro Max",
-      "preco": "3000",
-      "estoque": "29"
+      "id": "e528",
+      "nome": "A",
+      "preco": "22",
+      "estoque": "444"
     },
     {
-      "id": "3ad1",
-      "nome": "A30",
-      "preco": "2000",
-      "estoque": "200"
-    },
-    {
-      "id": "2fb1",
-      "nome": "Multilaser",
-      "preco": "20",
-      "estoque": "1"
+      "id": "ee02",
+      "nome": "F",
+      "preco": "22",
+      "estoque": "22"
     }
   ]
 }
