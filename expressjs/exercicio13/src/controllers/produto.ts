@@ -50,15 +50,16 @@ const update = async (req: Request, res: Response) => {
     } else {
         const produtoAtualizado = req.body as UpdateProdutoDto;
         try {
-            const response = fetch(`${process.env.URL_DB}/produtos/${id}`, {
+            const response = await fetch(`${process.env.URL_DB}/produtos/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify(produtoAtualizado),
-            }).then(response => response.json()).then((data) => {
-                console.log(data);
-                res.redirect(`/produto/${id}`);
+                headers: { 'Content-Type': 'application/json' },
             });
-        } catch (err) {
-            console.log(err);
+            const data = await response.json();
+            console.log(data);
+            res.redirect(`/produto/${id}`);
+        } catch (error) {
+            console.error('Erro ao atualizar o produto:', error);
         }
     }
 };
@@ -72,7 +73,6 @@ const remove = async (req: Request, res: Response) => {
         await fetch(`${process.env.URL_DB}/produtos/${id}`, {
             method: 'DELETE'
         });
-
         res.redirect('/produto');
     } catch (err) {
         // Registramos quaisquer erros
