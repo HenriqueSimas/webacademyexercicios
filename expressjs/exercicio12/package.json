@@ -1,7 +1,6 @@
 {
-  "name": "exercicio01",
+  "name": "exercicio12",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/app.ts",
@@ -38,5 +37,6 @@
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
-  }
+  },
+  "description": ""
 }
