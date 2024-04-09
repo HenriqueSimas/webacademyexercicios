@@ -1,18 +1,6 @@
 {
   "produtos": [
     {
-      "nome": "Luminária ",
-      "preco": "30",
-      "estoque": "44",
-      "id": "1710"
-    },
-    {
-      "id": "9999",
-      "nome": "Smartphone Xiaomi Redmi Note 13",
-      "preco": "1800",
-      "estoque": "300"
-    },
-    {
       "id": "1a18",
       "nome": "Smartphone Xiaomi POCO X6 Pro 5G ",
       "preco": "2300",
@@ -22,24 +10,6 @@
       "id": "1e1b",
       "nome": "Smartphone Xiaomi POCO X6 ",
       "preco": "4000",
-      "estoque": "2"
-    },
-    {
-      "id": "4923",
-      "nome": "Celular ",
-      "preco": "30",
-      "estoque": "1"
-    },
-    {
-      "id": "66de",
-      "nome": "Motora",
-      "preco": "2000",
-      "estoque": "2"
-    },
-    {
-      "id": "3a04",
-      "nome": "Moto G ",
-      "preco": "100",
       "estoque": "2"
     }
   ]

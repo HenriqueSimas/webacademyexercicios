@@ -1,5 +1,5 @@
 import { Request, response, Response } from "express"
-import Produto, { UpdateProdutoDto } from "../types/produto"
+import {Produto, UpdateProdutoDto } from "../types/produto"
 import{CreateProdutoDto} from "../types/produto"
 import { log } from "console";
 
@@ -23,7 +23,7 @@ const create = async (req: Request, res: Response) =>{
             method: 'POST',
             body: JSON.stringify(produto)
         })
-        res.redirect("/produto")
+        res.redirect("/produto");
     } catch (err) {
         console.log(err)
     }
