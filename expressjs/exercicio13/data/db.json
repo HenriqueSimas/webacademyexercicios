@@ -1,16 +1,28 @@
 {
   "produtos": [
     {
-      "id": "e528",
-      "nome": "A",
-      "preco": "22",
-      "estoque": "444"
+      "nome": "Carregador Sem Fio",
+      "preco": "200",
+      "estoque": "30",
+      "id": "b4ef"
     },
     {
-      "id": "ee02",
-      "nome": "F",
-      "preco": "22",
-      "estoque": "22"
+      "id": "2be1",
+      "nome": "Kindle 11",
+      "preco": "450",
+      "estoque": "100"
+    },
+    {
+      "id": "39fe",
+      "nome": "Fone De Ouvido Bluetooth E10 ",
+      "preco": "60",
+      "estoque": "400"
+    },
+    {
+      "nome": "Steck-Controle Universal ",
+      "preco": "40",
+      "estoque": "900",
+      "id": "474a"
     }
   ]
 }
