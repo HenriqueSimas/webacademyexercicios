@@ -1,4 +1,4 @@
-import { Request, response, Response } from "express"
+import { Request,Response } from "express"
 import {Produto, UpdateProdutoDto } from "../types/produto"
 import{CreateProdutoDto} from "../types/produto"
 import { log } from "console";
@@ -66,7 +66,7 @@ const update = async (req: Request, res: Response) => {
 
 
 const remove = async (req: Request, res: Response) => {
-    // Extraímos o 'id' dos parâmetros da requisição
+    
     const { id } = req.params;
     try {
         
@@ -75,7 +75,7 @@ const remove = async (req: Request, res: Response) => {
         });
         res.redirect('/produto');
     } catch (err) {
-        // Registramos quaisquer erros
+        
         console.log(err);
     }
 };
